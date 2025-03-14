@@ -1,13 +1,26 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Logo from "./logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
-const HomeScreen = () => {
+const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [studentNumber, setStudentNumber] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (studentNumber === "12345" && password === "3890") {
+      navigate("/home");
+    } else {
+      window.location.href = "https://airqo.net";
+    }
   };
 
   return (
@@ -19,12 +32,14 @@ const HomeScreen = () => {
         </div>
         <h2 className="text-center text-2xl font-bold mb-4 text-blue-500">KYAMBOGO UNIVERSITY</h2>
         <h3 className="text-center text-lg mb-6 text-blue-500">STUDENT PORTAL</h3>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <input
               type="text"
               placeholder="Student Number or Reg. Number"
               className="w-full p-3 border border-gray-300 rounded"
+              value={studentNumber}
+              onChange={(e) => setStudentNumber(e.target.value)}
             />
           </div>
           <div className="mb-6 relative">
@@ -32,6 +47,8 @@ const HomeScreen = () => {
               type={showPassword ? "text" : "password"}
               placeholder="Password"
               className="w-full p-3 border border-gray-300 rounded"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
             <button
               type="button"
@@ -57,4 +74,4 @@ const HomeScreen = () => {
   );
 };
 
-export default HomeScreen;
+export default Login;
