@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import StatusSection from './StatusSection';
 import EnrollmentForm from './EnrollmentForm';
@@ -17,6 +18,14 @@ import Payments from './Payments';
 const HomeScreen = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [activeForm, setActiveForm] = useState('enrollment');
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const isAuthenticated = localStorage.getItem("isAuthenticated");
+    if (!isAuthenticated) {
+      navigate("/");
+    }
+  }, [navigate]);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);

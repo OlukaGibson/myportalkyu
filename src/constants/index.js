@@ -308,7 +308,7 @@ export const PAYMENTS_HISTORY = [
     "enityname" : "KEEYA JOHNMARY",
     "amount" : TUTION_FEES[0],
     "bank" : "STANBIC BANK",
-    "branch" : "KAMPALA ROAD",
+    "branch" : "KYAMBOGO AGENT BANKING",
     "paymentdate" : ENROLLED_DATE[0],
   },
   {
@@ -316,15 +316,15 @@ export const PAYMENTS_HISTORY = [
     "enityname" : "KEEYA JOHNMARY",
     "amount" : TUTION_FEES[1],
     "bank" : "STANBIC BANK",
-    "branch" : "KAMPALA ROAD",
-    "paymentdate" : ENROLLED_DATE[0],
+    "branch" : "KYAMBOGO AGENT BANKING",
+    "paymentdate" : ENROLLED_DATE[1],
   },
   {
     "reference" : INVOICE_NO[2],
     "enityname" : "KEEYA JOHNMARY",
     "amount" : TUTION_FEES[2],
     "bank" : "STANBIC BANK",
-    "branch" : "KAMPALA ROAD",
-    "paymentdate" : ENROLLED_DATE[0],
+    "branch" : "KYAMBOGO AGENT BANKING",
+    "paymentdate" : ENROLLED_DATE[2],
   }
 ];

@@ -18,6 +18,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (studentNumber === STUDENT_NUMBER && password === PASSWORD) {
+      localStorage.setItem("isAuthenticated", "true");
       navigate("/home");
     } else {
       window.location.href = "https://myportal.kyu.ac.ug/";
