@@ -5,28 +5,28 @@ export const NAME_SMALL = "Keeya Johnmary";
 export const NAME_CAPS = "KEEYA JOHNMARY";
 export const NAME_MIX = "KEEYA Johnmary";
 export const YEAR_OF_STUDY = ["-----------", "YEAR 1", "YEAR 2", "YEAR 3"];
-export const ENROLLING_AS = ["-----------", "Fresher", "Continuing Student", "Retake Student", "Finalist"];
+export const ENROLLING_AS = ["-----------", "FRESH STUDENT", "CONTINUING STUDENT", "RETAKE STUDENT", "FINALIST"];
 export const HAVE_RETAKES = ["No", "Yes"];
-export const COURSE = "Bachelor of Business Administration - (BBA)";
-export const STUDENT_NUMBER = "2300812718";
-export const REGISTRATION_NUMBER = "18/U/23008/PS";
+export const COURSE = "Bachelor of Science in Statistics - (BSTAT)";
+export const STUDENT_NUMBER = "2300806773";
+export const REGISTRATION_NUMBER = "23/U/STE/6773";
 export const GENDER = "MALE";
-export const DATE_OF_BIRTH = "14/04/2003";
-export const FACUILTY = "Faculty of Business and Management Sciences";
-export const PROGRAMME = "(BBA)Bachelor of Business Administration";
+export const DATE_OF_BIRTH = "19/11/2002";
+export const FACUILTY = "Faculty of Science";
+export const PROGRAMME = "(BSTAT) Bachelor of Science in Statistics";
 
 
-export const SECTIONS = ["YEAR 1 - 2021/2022 - SEMESTER l", "YEAR 1 - 2021/2022 - SEMESTER ll", "YEAR 2- 2022/2023 - SEMESTER l"]; //, "YEAR 2- 2022/2023 - SEMESTER ll", "YEAR 3- 2023/2024 - SEMESTER l", "YEAR 3- 2023/2024 - SEMESTER ll"
+export const SECTIONS = ["YEAR 1 - 2023/2024 - SEMESTER l", "YEAR 1 - 2023/2024 - SEMESTER ll", "YEAR 2- 2024/2025 - SEMESTER l", "YEAR 2- 2024/2025 - SEMESTER ll"]; //, "YEAR 2- 2022/2023 - SEMESTER ll", "YEAR 3- 2023/2024 - SEMESTER l", "YEAR 3- 2023/2024 - SEMESTER ll"
 export const GRADES = ["A", "B", "C", "D", "E", "F"];
 export const REMARKS = ["NP", "RETAKE", "MISSING"]
-export const ACADEMIC_YEAR = ["2021/2022", "2022/2023", "2023/2024", "2024/2025"];
+export const ACADEMIC_YEAR = ["2023/2024", "2024/2025"];
 export const SEMESTERS = ["SEMESTER l", "SEMESTER ll"];
-export const ENROLLED_BY = ["REGISTER", "SELF"];
+export const ENROLLED_BY = ["REGISTRA", "SELF"];
 export const ENROLLED_TOKEN = ["ENR1441877313", "ENR1441877314", "ENR1441877315"];
-export const ENROLLED_DATE = ["2021-08-01", "2021-08-02", "2021-08-03"];
-export const ENROLLMENT_TIME = ["08:00 AM", "10:00 AM", "02:00 PM"];
-export const TUTION_FEES = [1000000, 2000000, 3000000];
-export const FUNCTIONAL_FEES = [500000, 1000000, 1500000];
+export const ENROLLED_DATE = ["2023-10-26", "2024-03-02", "2024-11-28"];
+export const ENROLLMENT_TIME = ["08:00:24 AM", "10:00:41 AM", "02:00:23 PM"];
+export const TUTION_FEES = [700000, 700000, 1050000];
+export const FUNCTIONAL_FEES = [572000, 250000, 572000];
 export const INVOICE_NO = ["INV1441877313", "INV1441877314", "INV1441877315"];
 export const REGISTRATION_TYPE = ["FULL REGISTRATION", "PARTIAL REGISTRATION"];
 export const SEMESTER_RESULTS = [
@@ -63,9 +63,29 @@ export const SEMESTER_RESULTS = [
 ];
 export const COURSES = [
   {
-    'code': 'BBA 1101',
-    'title': 'Introduction to Business',
-    'Marks': 70,
+    'code': 'SMT1101',
+    'title': 'Calculus',
+    'Marks': 92,
+    'CU': 3,
+    'grade': GRADES[0],
+    'gd point': 5,
+    'remark': REMARKS[0],
+    'section': SECTIONS[0]
+  },
+  {
+    'code': 'SMT1102',
+    'title': 'Elements of Probability and Statistics',
+    'Marks': 87,
+    'CU': 3,
+    'grade': GRADES[0],
+    'gd point': 5,
+    'remark': REMARKS[0],
+    'section': SECTIONS[0]
+  },
+  {
+    'code': 'STM1103',
+    'title': 'Linear Algebra',
+    'Marks': 74,
     'CU': 3,
     'grade': GRADES[0],
     'gd point': 4.0,
@@ -73,58 +93,58 @@ export const COURSES = [
     'section': SECTIONS[0]
   },
   {
-    'code': 'BBA 1101',
-    'title': 'Introduction to Business',
-    'Marks': 70,
+    'code': 'SMT1104',
+    'title': 'Principles of Sample Surveys',
+    'Marks': 75,
     'CU': 3,
     'grade': GRADES[0],
-    'gd point': 4.0,
+    'gd point': 4.5,
     'remark': REMARKS[0],
     'section': SECTIONS[0]
   },
   {
-    'code': 'BBA 1101',
-    'title': 'Introduction to Business',
-    'Marks': 70,
+    'code': 'SMT1105',
+    'title': 'Programming Methodology',
+    'Marks': 88,
     'CU': 3,
     'grade': GRADES[0],
-    'gd point': 4.0,
+    'gd point': 5,
     'remark': REMARKS[0],
     'section': SECTIONS[0]
   },
   {
-    'code': 'BBA 1101',
-    'title': 'Introduction to Business',
-    'Marks': 70,
+    'code': 'SMT1106',
+    'title': 'Explotory Data Analysis',
+    'Marks': 75,
     'CU': 3,
     'grade': GRADES[0],
-    'gd point': 4.0,
+    'gd point': 4.5,
     'remark': REMARKS[0],
     'section': SECTIONS[0]
   },
   {
-    'code': 'BBA 1101',
-    'title': 'Introduction to Business',
-    'Marks': 70,
+    'code': 'SMT1201',
+    'title': 'Vector Calculus',
+    'Marks': 80,
     'CU': 3,
     'grade': GRADES[0],
-    'gd point': 4.0,
+    'gd point': 5,
     'remark': REMARKS[0],
-    'section': SECTIONS[0]
+    'section': SECTIONS[1]
   },
   {
-    'code': 'BBA 1101',
-    'title': 'Introduction to Business',
-    'Marks': 70,
+    'code': 'SMT1202',
+    'title': 'Linear Programming',
+    'Marks': 77,
     'CU': 3,
     'grade': GRADES[0],
-    'gd point': 4.0,
+    'gd point': 4.5,
     'remark': REMARKS[0],
-    'section': SECTIONS[0]
+    'section': SECTIONS[1]
   },
   {
-    'code': 'BBA 1101',
-    'title': 'Introduction to Business',
+    'code': 'SMT1203',
+    'title': 'Operations Research',
     'Marks': 70,
     'CU': 3,
     'grade': GRADES[0],
@@ -133,8 +153,18 @@ export const COURSES = [
     'section': SECTIONS[1]
   },
   {
-    'code': 'BBA 1101',
-    'title': 'Introduction to Business',
+    'code': 'SMT1204',
+    'title': 'Computation Methods and Data Analysis',
+    'Marks': 65,
+    'CU': 3,
+    'grade': GRADES[0],
+    'gd point': 3.5,
+    'remark': REMARKS[0],
+    'section': SECTIONS[1]
+  },
+  {
+    'code': 'SMT1205',
+    'title': 'Economic and Social Statistics',
     'Marks': 70,
     'CU': 3,
     'grade': GRADES[0],
@@ -143,48 +173,28 @@ export const COURSES = [
     'section': SECTIONS[1]
   },
   {
-    'code': 'BBA 1101',
-    'title': 'Introduction to Business',
-    'Marks': 70,
+    'code': 'SMT1206',
+    'title': 'Time Series Analysis',
+    'Marks': 75,
     'CU': 3,
     'grade': GRADES[0],
-    'gd point': 4.0,
+    'gd point': 4.5,
     'remark': REMARKS[0],
     'section': SECTIONS[1]
   },
   {
-    'code': 'BBA 1101',
-    'title': 'Introduction to Business',
-    'Marks': 70,
+    'code': 'SMT2101',
+    'title': 'Ordinary Differential Equations',
+    'Marks': 69,
     'CU': 3,
     'grade': GRADES[0],
-    'gd point': 4.0,
-    'remark': REMARKS[0],
-    'section': SECTIONS[1]
+    'gd point': 3.5,
+    'remark': REMARKS[2],
+    'section': SECTIONS[2]
   },
   {
-    'code': 'BBA 1101',
-    'title': 'Introduction to Business',
-    'Marks': 70,
-    'CU': 3,
-    'grade': GRADES[0],
-    'gd point': 4.0,
-    'remark': REMARKS[0],
-    'section': SECTIONS[1]
-  },
-  {
-    'code': 'BBA 1101',
-    'title': 'Introduction to Business',
-    'Marks': 70,
-    'CU': 3,
-    'grade': GRADES[0],
-    'gd point': 4.0,
-    'remark': REMARKS[0],
-    'section': SECTIONS[1]
-  },
-  {
-    'code': 'BBA 1101',
-    'title': 'Introduction to Business',
+    'code': 'SMT2102',
+    'title': 'Mathematical Analysis 1',
     'Marks': 70,
     'CU': 3,
     'grade': GRADES[0],
@@ -193,8 +203,8 @@ export const COURSES = [
     'section': SECTIONS[2]
   },
   {
-    'code': 'BBA 1101',
-    'title': 'Introduction to Business',
+    'code': 'SMT2103',
+    'title': 'Probability Modelling',
     'Marks': 70,
     'CU': 3,
     'grade': GRADES[0],
@@ -203,8 +213,8 @@ export const COURSES = [
     'section': SECTIONS[2]
   },
   {
-    'code': 'BBA 1101',
-    'title': 'Introduction to Business',
+    'code': 'SMT2104',
+    'title': 'Database Management and Analysis',
     'Marks': 70,
     'CU': 3,
     'grade': GRADES[0],
@@ -213,28 +223,18 @@ export const COURSES = [
     'section': SECTIONS[2]
   },
   {
-    'code': 'BBA 1101',
-    'title': 'Introduction to Business',
+    'code': 'SMT2105',
+    'title': 'Theory of Estimation and Testing Hypotheses',
     'Marks': 70,
     'CU': 3,
     'grade': GRADES[0],
     'gd point': 4.0,
-    'remark': REMARKS[0],
+    'remark': REMARKS[2],
     'section': SECTIONS[2]
   },
   {
-    'code': 'BBA 1101',
-    'title': 'Introduction to Business',
-    'Marks': 70,
-    'CU': 3,
-    'grade': GRADES[0],
-    'gd point': 4.0,
-    'remark': REMARKS[0],
-    'section': SECTIONS[2]
-  },
-  {
-    'code': 'BBA 1101',
-    'title': 'Introduction to Business',
+    'code': 'SMT2106',
+    'title': 'Statistical Inference',
     'Marks': 70,
     'CU': 3,
     'grade': GRADES[0],
