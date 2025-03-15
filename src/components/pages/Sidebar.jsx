@@ -7,6 +7,7 @@ const Sidebar = ({ isOpen, toggleSidebar, setActiveForm }) => {
   const [isProgrammeOpen, setIsProgrammeOpen] = useState(false);
   const [isProgrammeOpen1, setIsProgrammeOpen1] = useState(false);
   const [isProgrammeOpen2, setIsProgrammeOpen2] = useState(false);
+  const [activeItem, setActiveItem] = useState('');
 
   const toggleProgramme = () => {
     setIsProgrammeOpen(!isProgrammeOpen);
@@ -22,12 +23,13 @@ const Sidebar = ({ isOpen, toggleSidebar, setActiveForm }) => {
 
   const handleItemClick = (form) => {
     setActiveForm(form);
+    setActiveItem(form);
     toggleSidebar();
   };
 
   return (
     <div className={`fixed inset-0 bg-black bg-opacity-50 z-50 ${isOpen ? 'block' : 'hidden'}`}>
-      <div className="fixed inset-y-0 left-0 w-80 bg-white shadow-lg p-4">
+      <div className="fixed inset-y-0 left-0 w-80 bg-white shadow-lg p-4 overflow-y-auto max-h-screen">
         <div className="flex justify-between items-center mb-4">
           <div className="flex items-center">
             <img src={Logo} alt="Kyambogo University Logo" className="h-8 w-8 mr-2" />
@@ -45,75 +47,129 @@ const Sidebar = ({ isOpen, toggleSidebar, setActiveForm }) => {
           </div>
         </div>
         <ul className="space-y-4">
-          <li className="text-gray-800 font-bold flex items-center cursor-pointer" onClick={() => handleItemClick('generatePRN')}>
+          <li
+            className={`text-gray-800 font-bold flex items-center cursor-pointer p-2 rounded ${activeItem === 'generatePRN' ? 'bg-green-500 text-white' : 'hover:bg-gray-200'}`}
+            onClick={() => handleItemClick('generatePRN')}
+          >
             <FaFileAlt className="mr-2" /> 01 GENERATE PRN
           </li>
-          <li className="text-gray-800 font-bold flex items-center cursor-pointer" onClick={() => handleItemClick('financeClearance')}>
+          <li
+            className={`text-gray-800 font-bold flex items-center cursor-pointer p-2 rounded ${activeItem === 'financeClearance' ? 'bg-green-500 text-white' : 'hover:bg-gray-200'}`}
+            onClick={() => handleItemClick('financeClearance')}
+          >
             <FaMoneyCheckAlt className="mr-2" /> FINANCE CLEARANCE
           </li>
 
-          <li className="text-gray-800 font-bold flex items-center cursor-pointer" onClick={toggleProgramme1}>
+          <li
+            className={`text-gray-800 font-bold flex items-center cursor-pointer p-2 rounded ${isProgrammeOpen1 ? 'bg-gray-200' : ''}`}
+            onClick={toggleProgramme1}
+          >
             <FaBook className="mr-2" /> ENROLLMENT & REGISTRATION {isProgrammeOpen1 ? <FaChevronUp className="ml-auto" /> : <FaChevronDown className="ml-auto" />}
           </li>
           {isProgrammeOpen1 && (
             <ul className="pl-8 space-y-2">
-              <li className="text-gray-800 font-bold flex items-center cursor-pointer" onClick={() => handleItemClick('enrollment')}>
+              <li
+                className={`text-gray-800 font-bold flex items-center cursor-pointer p-2 rounded ${activeItem === 'enrollment' ? 'bg-green-500 text-white' : 'hover:bg-gray-200'}`}
+                onClick={() => handleItemClick('enrollment')}
+              >
                 <FaClipboardList className="mr-2" /> Enroll or Register
               </li>
-              <li className="text-gray-800 font-bold flex items-center cursor-pointer" onClick={() => handleItemClick('enrollmenthistory')}>
+              <li
+                className={`text-gray-800 font-bold flex items-center cursor-pointer p-2 rounded ${activeItem === 'enrollmenthistory' ? 'bg-green-500 text-white' : 'hover:bg-gray-200'}`}
+                onClick={() => handleItemClick('enrollmenthistory')}
+              >
                 <FaClipboardList className="mr-2" /> Enrollment History
               </li>
-              <li className="text-gray-800 font-bold flex items-center cursor-pointer" onClick={() => handleItemClick('registrationhistory')}>
+              <li
+                className={`text-gray-800 font-bold flex items-center cursor-pointer p-2 rounded ${activeItem === 'registrationhistory' ? 'bg-green-500 text-white' : 'hover:bg-gray-200'}`}
+                onClick={() => handleItemClick('registrationhistory')}
+              >
                 <FaClipboardList className="mr-2" /> Registration History
               </li>
             </ul>
           )}
 
-          <li className="text-gray-800 font-bold flex items-center cursor-pointer" onClick={() => handleItemClick('payments')}>
+          <li
+            className={`text-gray-800 font-bold flex items-center cursor-pointer p-2 rounded ${activeItem === 'payments' ? 'bg-green-500 text-white' : 'hover:bg-gray-200'}`}
+            onClick={() => handleItemClick('payments')}
+          >
             <FaDollarSign className="mr-2" /> PAYMENTS
           </li>
 
-          <li className="text-gray-800 font-bold flex items-center cursor-pointer" onClick={toggleProgramme}>
+          <li
+            className={`text-gray-800 font-bold flex items-center cursor-pointer p-2 rounded ${isProgrammeOpen ? 'bg-gray-200' : ''}`}
+            onClick={toggleProgramme}
+          >
             <FaBook className="mr-2" /> MY PROGRAMME {isProgrammeOpen ? <FaChevronUp className="ml-auto" /> : <FaChevronDown className="ml-auto" />}
           </li>
           {isProgrammeOpen && (
             <ul className="pl-8 space-y-2">
-              <li className="text-gray-800 font-bold flex items-center cursor-pointer" onClick={() => handleItemClick('myResults')}>
+              <li
+                className={`text-gray-800 font-bold flex items-center cursor-pointer p-2 rounded ${activeItem === 'myResults' ? 'bg-green-500 text-white' : 'hover:bg-gray-200'}`}
+                onClick={() => handleItemClick('myResults')}
+              >
                 <FaClipboardList className="mr-2" /> My Results
               </li>
-              <li className="text-gray-800 font-bold flex items-center cursor-pointer" onClick={() => handleItemClick('myProvisionalResults')}>
+              <li
+                className={`text-gray-800 font-bold flex items-center cursor-pointer p-2 rounded ${activeItem === 'myProvisionalResults' ? 'bg-green-500 text-white' : 'hover:bg-gray-200'}`}
+                onClick={() => handleItemClick('myProvisionalResults')}
+              >
                 <FaClipboardList className="mr-2" /> My Provisional Results
               </li>
-              <li className="text-gray-800 font-bold flex items-center cursor-pointer" onClick={() => handleItemClick('teachingTimetable')}>
+              <li
+                className={`text-gray-800 font-bold flex items-center cursor-pointer p-2 rounded ${activeItem === 'teachingTimetable' ? 'bg-green-500 text-white' : 'hover:bg-gray-200'}`}
+                onClick={() => handleItemClick('teachingTimetable')}
+              >
                 <FaClipboardList className="mr-2" /> Teaching TimeTable
               </li>
             </ul>
           )}
 
-          <li className="text-gray-800 font-bold flex items-center cursor-pointer" onClick={toggleProgramme2}>
+          <li
+            className={`text-gray-800 font-bold flex items-center cursor-pointer p-2 rounded ${isProgrammeOpen2 ? 'bg-gray-200' : ''}`}
+            onClick={toggleProgramme2}
+          >
             <FaBook className="mr-2" />SERVICES {isProgrammeOpen2 ? <FaChevronUp className="ml-auto" /> : <FaChevronDown className="ml-auto" />}
           </li>
           {isProgrammeOpen2 && (
             <ul className="pl-8 space-y-2">
-              <li className="text-gray-800 font-bold flex items-center cursor-pointer" onClick={() => handleItemClick('applyforservices')}>
+              <li
+                className={`text-gray-800 font-bold flex items-center cursor-pointer p-2 rounded ${activeItem === 'applyforservices' ? 'bg-green-500 text-white' : 'hover:bg-gray-200'}`}
+                onClick={() => handleItemClick('applyforservices')}
+              >
                 <FaClipboardList className="mr-2" /> APPLY FOR SERVICES
               </li>
-              <li className="text-gray-800 font-bold flex items-center cursor-pointer" onClick={() => handleItemClick('servicehistory')}>
+              <li
+                className={`text-gray-800 font-bold flex items-center cursor-pointer p-2 rounded ${activeItem === 'servicehistory' ? 'bg-green-500 text-white' : 'hover:bg-gray-200'}`}
+                onClick={() => handleItemClick('servicehistory')}
+              >
                 <FaClipboardList className="mr-2" /> SERVICE HISTORY
               </li>
-              <li className="text-gray-800 font-bold flex items-center cursor-pointer" onClick={() => handleItemClick('newidcards')}>
+              <li
+                className={`text-gray-800 font-bold flex items-center cursor-pointer p-2 rounded ${activeItem === 'newidcards' ? 'bg-green-500 text-white' : 'hover:bg-gray-200'}`}
+                onClick={() => handleItemClick('newidcards')}
+              >
                 <FaClipboardList className="mr-2" /> NEW ID CARDS
               </li>
             </ul>
           )}
 
-          <li className="text-gray-800 font-bold flex items-center cursor-pointer" onClick={() => handleItemClick('bioData')}>
+          <li
+            className={`text-gray-800 font-bold flex items-center cursor-pointer p-2 rounded ${activeItem === 'bioData' ? 'bg-green-500 text-white' : 'hover:bg-gray-200'}`}
+            onClick={() => handleItemClick('bioData')}
+          >
             <FaUser className="mr-2" /> BIO DATA
           </li>
-          <li className="text-gray-800 font-bold flex items-center cursor-pointer" onClick={() => handleItemClick('academicCalendar')}>
+          <li
+            className={`text-gray-800 font-bold flex items-center cursor-pointer p-2 rounded ${activeItem === 'academicCalendar' ? 'bg-green-500 text-white' : 'hover:bg-gray-200'}`}
+            onClick={() => handleItemClick('academicCalendar')}
+          >
             <FaCalendarAlt className="mr-2" /> ACADEMIC CALENDAR
           </li>
-          <li className="text-gray-800 font-bold flex items-center cursor-pointer" onClick={() => handleItemClick('evaluationSurveys')}>
+          <li
+            className={`text-gray-800 font-bold flex items-center cursor-pointer p-2 rounded ${activeItem === 'evaluationSurveys' ? 'bg-green-500 text-white' : 'hover:bg-gray-200'}`}
+            onClick={() => handleItemClick('evaluationSurveys')}
+          >
             <FaClipboardList className="mr-2" /> EVALUATION SURVEYS
           </li>
         </ul>

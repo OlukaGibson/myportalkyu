@@ -48,7 +48,7 @@ const EnrollmentForm = () => {
               ))}
             </select>
           </div>
-          <button type="submit" className="w-full bg-green-700 text-white p-3 rounded hover:bg-green-800">
+          <button className="w-full bg-green-700 text-white p-3 rounded hover:bg-green-800" onClick={reloadForm} >
             ENROLL NOW
           </button>
         </form>

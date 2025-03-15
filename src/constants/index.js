@@ -9,6 +9,7 @@ export const ENROLLING_AS = ["-----------", "FRESH STUDENT", "CONTINUING STUDENT
 export const HAVE_RETAKES = ["No", "Yes"];
 export const COURSE = "Bachelor of Science in Statistics - (BSTAT)";
 export const STUDENT_NUMBER = "2300806773";
+export const PASSWORD = "230080";
 export const REGISTRATION_NUMBER = "23/U/STE/6773";
 export const GENDER = "MALE";
 export const DATE_OF_BIRTH = "19/11/2002";
@@ -32,33 +33,23 @@ export const REGISTRATION_TYPE = ["FULL REGISTRATION", "PARTIAL REGISTRATION"];
 export const SEMESTER_RESULTS = [
   {
     'section': SECTIONS[0],
-    'gpa': 4.0,
-    'cgpa': 4.0,
+    'gpa': 4.3,
+    'cgpa': 4.3,
   },
   {
     'section': SECTIONS[1],
-    'gpa': 3.5,
-    'cgpa': 3.75,
+    'gpa': 4.1,
+    'cgpa': 4.21,
   },
   {
     'section': SECTIONS[2],
-    'gpa': 3.0,
-    'cgpa': 3.5,
+    'gpa': 3.9,
+    'cgpa': 4.1,
   },
   {
     'section': SECTIONS[3],
-    'gpa': 2.5,
-    'cgpa': 3.0,
-  },
-  {
-    'section': SECTIONS[4],
-    'gpa': 2.0,
-    'cgpa': 2.5,
-  },
-  {
-    'section': SECTIONS[5],
-    'gpa': 1.5,
-    'cgpa': 2.0,
+    'gpa': "--",
+    'cgpa': "--",
   }
 ];
 export const COURSES = [
@@ -76,7 +67,7 @@ export const COURSES = [
     'code': 'SMT1102',
     'title': 'Elements of Probability and Statistics',
     'Marks': 87,
-    'CU': 3,
+    'CU': 4,
     'grade': GRADES[0],
     'gd point': 5,
     'remark': REMARKS[0],
@@ -86,8 +77,8 @@ export const COURSES = [
     'code': 'STM1103',
     'title': 'Linear Algebra',
     'Marks': 74,
-    'CU': 3,
-    'grade': GRADES[0],
+    'CU': 4,
+    'grade': GRADES[1],
     'gd point': 4.0,
     'remark': REMARKS[0],
     'section': SECTIONS[0]
@@ -96,8 +87,8 @@ export const COURSES = [
     'code': 'SMT1104',
     'title': 'Principles of Sample Surveys',
     'Marks': 75,
-    'CU': 3,
-    'grade': GRADES[0],
+    'CU': 4,
+    'grade': GRADES[1],
     'gd point': 4.5,
     'remark': REMARKS[0],
     'section': SECTIONS[0]
@@ -116,8 +107,8 @@ export const COURSES = [
     'code': 'SMT1106',
     'title': 'Explotory Data Analysis',
     'Marks': 75,
-    'CU': 3,
-    'grade': GRADES[0],
+    'CU': 4,
+    'grade': GRADES[1],
     'gd point': 4.5,
     'remark': REMARKS[0],
     'section': SECTIONS[0]
@@ -126,7 +117,7 @@ export const COURSES = [
     'code': 'SMT1201',
     'title': 'Vector Calculus',
     'Marks': 80,
-    'CU': 3,
+    'CU': 4,
     'grade': GRADES[0],
     'gd point': 5,
     'remark': REMARKS[0],
@@ -136,8 +127,8 @@ export const COURSES = [
     'code': 'SMT1202',
     'title': 'Linear Programming',
     'Marks': 77,
-    'CU': 3,
-    'grade': GRADES[0],
+    'CU': 4,
+    'grade': GRADES[1],
     'gd point': 4.5,
     'remark': REMARKS[0],
     'section': SECTIONS[1]
@@ -147,7 +138,7 @@ export const COURSES = [
     'title': 'Operations Research',
     'Marks': 70,
     'CU': 3,
-    'grade': GRADES[0],
+    'grade': GRADES[1],
     'gd point': 4.0,
     'remark': REMARKS[0],
     'section': SECTIONS[1]
@@ -156,8 +147,8 @@ export const COURSES = [
     'code': 'SMT1204',
     'title': 'Computation Methods and Data Analysis',
     'Marks': 65,
-    'CU': 3,
-    'grade': GRADES[0],
+    'CU': 4,
+    'grade': GRADES[2],
     'gd point': 3.5,
     'remark': REMARKS[0],
     'section': SECTIONS[1]
@@ -166,8 +157,8 @@ export const COURSES = [
     'code': 'SMT1205',
     'title': 'Economic and Social Statistics',
     'Marks': 70,
-    'CU': 3,
-    'grade': GRADES[0],
+    'CU': 4,
+    'grade': GRADES[1],
     'gd point': 4.0,
     'remark': REMARKS[0],
     'section': SECTIONS[1]
@@ -176,8 +167,8 @@ export const COURSES = [
     'code': 'SMT1206',
     'title': 'Time Series Analysis',
     'Marks': 75,
-    'CU': 3,
-    'grade': GRADES[0],
+    'CU': 4,
+    'grade': GRADES[1],
     'gd point': 4.5,
     'remark': REMARKS[0],
     'section': SECTIONS[1]
@@ -185,10 +176,10 @@ export const COURSES = [
   {
     'code': 'SMT2101',
     'title': 'Ordinary Differential Equations',
-    'Marks': 69,
+    'Marks': "--",
     'CU': 3,
-    'grade': GRADES[0],
-    'gd point': 3.5,
+    'grade': "--",
+    'gd point': "--",
     'remark': REMARKS[2],
     'section': SECTIONS[2]
   },
@@ -196,8 +187,8 @@ export const COURSES = [
     'code': 'SMT2102',
     'title': 'Mathematical Analysis 1',
     'Marks': 70,
-    'CU': 3,
-    'grade': GRADES[0],
+    'CU': 4,
+    'grade': GRADES[1],
     'gd point': 4.0,
     'remark': REMARKS[0],
     'section': SECTIONS[2]
@@ -207,7 +198,7 @@ export const COURSES = [
     'title': 'Probability Modelling',
     'Marks': 70,
     'CU': 3,
-    'grade': GRADES[0],
+    'grade': GRADES[1],
     'gd point': 4.0,
     'remark': REMARKS[0],
     'section': SECTIONS[2]
@@ -215,9 +206,9 @@ export const COURSES = [
   {
     'code': 'SMT2104',
     'title': 'Database Management and Analysis',
-    'Marks': 70,
-    'CU': 3,
-    'grade': GRADES[0],
+    'Marks': 77.2,
+    'CU': 4,
+    'grade': GRADES[1],
     'gd point': 4.0,
     'remark': REMARKS[0],
     'section': SECTIONS[2]
@@ -225,19 +216,19 @@ export const COURSES = [
   {
     'code': 'SMT2105',
     'title': 'Theory of Estimation and Testing Hypotheses',
-    'Marks': 70,
+    'Marks': "--",
     'CU': 3,
-    'grade': GRADES[0],
-    'gd point': 4.0,
+    'grade': "--",
+    'gd point': "--",
     'remark': REMARKS[2],
     'section': SECTIONS[2]
   },
   {
     'code': 'SMT2106',
     'title': 'Statistical Inference',
-    'Marks': 70,
-    'CU': 3,
-    'grade': GRADES[0],
+    'Marks': 60,
+    'CU': 4,
+    'grade': GRADES[1],
     'gd point': 4.0,
     'remark': REMARKS[0],
     'section': SECTIONS[2]
@@ -310,4 +301,31 @@ export const REGISTRATION_HISTORY = [
     'courses' : COURSES.filter(course => course.section === SECTIONS[0])
   },
   
+];
+
+export const PAYMENTS_HISTORY = [
+  {
+    "reference" : INVOICE_NO[0],
+    "enityname" : "KEEYA JOHNMARY",
+    "amount" : TUTION_FEES[0],
+    "bank" : "STANBIC BANK",
+    "branch" : "KAMPALA ROAD",
+    "paymentdate" : ENROLLED_DATE[0],
+  },
+  {
+    "reference" : INVOICE_NO[1],
+    "enityname" : "KEEYA JOHNMARY",
+    "amount" : TUTION_FEES[1],
+    "bank" : "STANBIC BANK",
+    "branch" : "KAMPALA ROAD",
+    "paymentdate" : ENROLLED_DATE[0],
+  },
+  {
+    "reference" : INVOICE_NO[2],
+    "enityname" : "KEEYA JOHNMARY",
+    "amount" : TUTION_FEES[2],
+    "bank" : "STANBIC BANK",
+    "branch" : "KAMPALA ROAD",
+    "paymentdate" : ENROLLED_DATE[0],
+  }
 ];

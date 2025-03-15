@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Sidebar from './Sidebar';
 import StatusSection from './StatusSection';
 import EnrollmentForm from './EnrollmentForm';
@@ -12,6 +12,7 @@ import MyRegistrationHistory from './MyRegistrationHistory';
 import ApplyForServices from './ApplyForServices';
 import MyIdentificationCard from './MyIdentificationCard';
 import ServiceHistory from './ServiceHistory';
+import Payments from './Payments';
 
 const HomeScreen = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -20,6 +21,50 @@ const HomeScreen = () => {
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
+
+  useEffect(() => {
+    switch (activeForm) {
+      case 'enrollment':
+        document.title = 'Enrollment';
+        break;
+      case 'myResults':
+        document.title = 'My Results';
+        break;
+      case 'myProvisionalResults':
+        document.title = 'My Provisional Results';
+        break;
+      case 'teachingTimetable':
+        document.title = 'Teaching Timetable';
+        break;
+      case 'financeClearance':
+        document.title = 'Finance Clearance';
+        break;
+      case 'generatePRN':
+        document.title = 'Generate PRN';
+        break;
+      case 'enrollmenthistory':
+        document.title = 'Enrollment History';
+        break;
+      case 'registrationhistory':
+        document.title = 'Registration History';
+        break;
+      case 'applyforservices':
+        document.title = 'Apply for Services';
+        break;
+      case 'newidcards':
+        document.title = 'New ID Cards';
+        break;
+      case 'servicehistory':
+        document.title = 'Service History';
+        break;
+      case 'payments':
+        document.title = 'Payments';
+        break;
+      default:
+        document.title = 'Enrollment';
+        break;
+    }
+  }, [activeForm]);
 
   const renderActiveForm = () => {
     switch (activeForm) {
@@ -45,6 +90,8 @@ const HomeScreen = () => {
         return <MyIdentificationCard />;
       case 'servicehistory':
         return <ServiceHistory />;
+      case 'payments':
+        return <Payments />;
       default:
         return <EnrollmentForm />;
     }

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Logo from "./logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import { STUDENT_NUMBER, PASSWORD } from "../../constants";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -16,10 +17,10 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (studentNumber === "12345" && password === "3890") {
+    if (studentNumber === STUDENT_NUMBER && password === PASSWORD) {
       navigate("/home");
     } else {
-      window.location.href = "https://airqo.net";
+      window.location.href = "https://myportal.kyu.ac.ug/";
     }
   };
 

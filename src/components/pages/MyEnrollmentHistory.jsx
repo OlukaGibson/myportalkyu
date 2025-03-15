@@ -54,7 +54,7 @@ const MyEnrollmentHistory = () => {
                       <span className="text-gray-600">{expandedInvoice === `tuition-${idx}` ? '▼' : '▶'}</span>
                     </div>
                     {expandedInvoice === `tuition-${idx}` && (
-                      <div className="p-2 border rounded mt-2 bg-blue-100">
+                      <div className="p-2 border rounded mt-2 bg-gray-100 overflow-x-auto">
                         <table className="min-w-full bg-white">
                           <thead>
                             <tr>
@@ -81,7 +81,7 @@ const MyEnrollmentHistory = () => {
                       <span className="text-gray-600">{expandedInvoice === `functional-${idx}` ? '▼' : '▶'}</span>
                     </div>
                     {expandedInvoice === `functional-${idx}` && (
-                      <div className="p-2 border rounded mt-2 bg-blue-100">
+                      <div className="p-2 border rounded mt-2 bg-gray-100 overflow-x-auto">
                         <table className="min-w-full bg-white">
                           <thead>
                             <tr>
