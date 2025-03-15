@@ -289,7 +289,7 @@ export const REGISTRATION_HISTORY = [
     'registrationtime' : ENROLLMENT_TIME[0],
     'section': SECTIONS[1],
     //couses which match the section
-    'courses' : COURSES.filter(course => course.section === SECTIONS[0])
+    'courses' : COURSES.filter(course => course.section === SECTIONS[1])
   },
   {
     'registrationtype' : REGISTRATION_TYPE[0],
@@ -298,11 +298,10 @@ export const REGISTRATION_HISTORY = [
     'registrationtime' : ENROLLMENT_TIME[0],
     'section': SECTIONS[2],
     //couses which match the section
-    'courses' : COURSES.filter(course => course.section === SECTIONS[0])
+    'courses' : COURSES.filter(course => course.section === SECTIONS[2])
   },
   
 ];
-
 export const PAYMENTS_HISTORY = [
   {
     "reference" : INVOICE_NO[0],
