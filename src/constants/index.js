@@ -33,18 +33,18 @@ export const REGISTRATION_TYPE = ["FULL REGISTRATION", "PARTIAL REGISTRATION"];
 export const SEMESTER_RESULTS = [
   {
     'section': SECTIONS[0],
-    'gpa': 4.3,
-    'cgpa': 4.3,
+    'gpa': 4.6,
+    'cgpa': 4.6,
   },
   {
     'section': SECTIONS[1],
-    'gpa': 4.1,
-    'cgpa': 4.21,
+    'gpa': 4.2,
+    'cgpa': 4.4,
   },
   {
     'section': SECTIONS[2],
-    'gpa': 3.9,
-    'cgpa': 4.1,
+    'gpa': 2.6,
+    'cgpa': 3.8,
   },
   {
     'section': SECTIONS[3],
